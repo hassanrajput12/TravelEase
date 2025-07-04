@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TravelEase
 Static website for Northern Pakistan tourism - TravelEase
 # TravelEase 🌄
@@ -26,3 +27,7 @@ TravelEase is a static website designed to promote the natural beauty, culture, 
 
 ## 📁 Project Structure
 
+=======
+# TravelEase
+Static website for Northern Pakistan tourism - TravelEase
+>>>>>>> 1bc4730e3fc898daeb782cabb3e867f931ca199b

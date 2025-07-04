@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "rules": {
     "color-no-invalid-hex": true,
@@ -12,3 +13,19 @@
     "string-quotes": "double"
   }
 }
+=======
+{
+  "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-colon-space-after": "always",
+    "block-no-empty": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "no-extra-semicolons": true,
+    "selector-pseudo-class-no-unknown": true,
+    "media-feature-name-no-unknown": true,
+    "comment-no-empty": true,
+    "string-quotes": "double"
+  }
+}
+>>>>>>> 1bc4730e3fc898daeb782cabb3e867f931ca199b

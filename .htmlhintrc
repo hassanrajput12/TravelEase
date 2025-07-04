@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "tagname-lowercase": true,
   "attr-lowercase": true,
@@ -10,3 +11,17 @@
   "alt-require": true,
   "head-script-disabled": true
 }
+=======
+{
+  "tagname-lowercase": true,
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "doctype-first": true,
+  "tag-pair": true,
+  "spec-char-escape": true,
+  "id-unique": true,
+  "src-not-empty": true,
+  "alt-require": true,
+  "head-script-disabled": true
+}
+>>>>>>> 1bc4730e3fc898daeb782cabb3e867f931ca199b
