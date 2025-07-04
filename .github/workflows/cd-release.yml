@@ -1,0 +1,26 @@
+name: CD to Staging
+
+on:
+  push:
+    branches: [release]  # Triggers when code is pushed to 'release' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: staging-env  # Ensure this environment exists in GitHub repo settings
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .  # Deploys all files (ensure HTML/CSS/JS exist)
+
+      - name: Deploy to Staging
+        uses: actions/deploy-pages@v2
