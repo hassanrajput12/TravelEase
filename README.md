@@ -20,7 +20,7 @@ TravelEase is a static website designed to promote the natural beauty, culture, 
 | Zoraiz       |l1s22bsse0054| Developer  | About Us page, cd-develop          |
 | Uzair        |l1s22bsse0063| Developer  | Contact Us Page, ci-release        |
 | Khubabib     |l1s22bsse0053| Developer  | Destination Page, cd-release       |
-| Rehan        |l1s22bsse    | Developer  | Travel Stories Page, ci-producction|
+| Rehan        |l1s22bsse0166| Developer  | Travel Stories Page, ci-producction|
 | Watoo        |l1f20bsse0427| Developer  | Travel Planner Page,cd-production  |
 
 ---
