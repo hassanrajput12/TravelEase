@@ -1,0 +1,22 @@
+name: CD Develop Workflow
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build || echo "Skipping build - adjust if needed"
+
+      - name: Simulate deployment
+        run: echo "Deploying to Develop environment..."
