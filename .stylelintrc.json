@@ -1,31 +1,34 @@
-<<<<<<< HEAD
 {
+  "extends": "stylelint-config-standard",
   "rules": {
-    "color-no-invalid-hex": true,
+    "indentation": 2,
+    "string-quotes": "double",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-named": "never",
+    "selector-combinator-space-after": "always",
+    "selector-attribute-quotes": "always",
+    "selector-attribute-operator-space-before": "never",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-brackets-space-inside": "never",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
     "declaration-colon-space-after": "always",
-    "block-no-empty": true,
-    "unit-no-unknown": true,
-    "property-no-unknown": true,
-    "no-extra-semicolons": true,
-    "selector-pseudo-class-no-unknown": true,
-    "media-feature-name-no-unknown": true,
-    "comment-no-empty": true,
-    "string-quotes": "double"
+    "number-leading-zero": "always",
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-where-recommended",
+    "comment-whitespace-inside": "always",
+    "rule-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    }],
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-class-parentheses-space-inside": "never",
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "media-feature-parentheses-space-inside": "never",
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": "always"
   }
 }
-=======
-{
-  "rules": {
-    "color-no-invalid-hex": true,
-    "declaration-colon-space-after": "always",
-    "block-no-empty": true,
-    "unit-no-unknown": true,
-    "property-no-unknown": true,
-    "no-extra-semicolons": true,
-    "selector-pseudo-class-no-unknown": true,
-    "media-feature-name-no-unknown": true,
-    "comment-no-empty": true,
-    "string-quotes": "double"
-  }
-}
->>>>>>> 1bc4730e3fc898daeb782cabb3e867f931ca199b

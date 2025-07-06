@@ -1,10 +1,10 @@
-name: CD - Deploy Release
+name: CD - Deploy Production
 
 on:
   push:
-    branches: [ release ]
+    branches: [ production ]
   workflow_run:
-    workflows: ["CI - Release Branch"]
+    workflows: ["CI - Production Branch"]
     types:
       - completed
 
@@ -27,21 +27,23 @@ jobs:
         npm init -y
         npm install --save-dev htmlhint stylelint stylelint-config-standard
         
-    - name: Run comprehensive linting
+    - name: Final validation
       run: |
         npx htmlhint src/**/*.html
         npx stylelint "styles/**/*.css"
         
-    - name: Build optimized site
+    - name: Build production site
       run: |
         mkdir -p dist
         cp -r src/* dist/
         cp -r styles dist/
-        echo "$(date): Release build completed" > dist/build-info.txt
+        echo "$(date): Production build completed" > dist/build-info.txt
+        echo "Version: $(git rev-parse --short HEAD)" >> dist/build-info.txt
         
-    - name: Deploy to GitHub Pages (Release)
+    - name: Deploy to GitHub Pages (Production)
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-        destination_dir: release
+        publish_branch: gh-pages
+        

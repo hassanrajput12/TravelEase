@@ -1,0 +1,46 @@
+name: CI - Release Branch
+
+on:
+  push:
+    branches: [ release ]
+  pull_request:
+    branches: [ release ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev htmlhint stylelint stylelint-config-standard
+        
+    - name: Run HTMLHint
+      run: npx htmlhint src/**/*.html
+      
+    - name: Run Stylelint
+      run: npx stylelint "styles/**/*.css"
+      
+    - name: Advanced HTML validation
+      run: |
+        echo "Running release-level checks..."
+        # Check for TODO comments
+        grep -r "TODO\|FIXME\|XXX" src/ && echo "Warning: Found TODO comments" || echo "No TODO comments found"
+        # Check for console.log in any inline scripts
+        grep -r "console\.log" src/ && echo "Warning: Found console.log statements" || echo "No console.log found"
+        
+    - name: Performance audit preparation
+      run: |
+        echo "Checking file sizes..."
+        find src/ -name "*.html" -exec wc -c {} + | sort -n
+        find styles/ -name "*.css" -exec wc -c {} + | sort -n

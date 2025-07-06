@@ -16,12 +16,12 @@ TravelEase is a static website designed to promote the natural beauty, culture, 
 
 | Name         | Roll Number | Role       | Task                          |
 |--------------|-------------|------------|-------------------------------|
-| Hassan       | [Your Roll] | Team Lead  | Home Page, CI Workflow        |
-| Zoraiz       | [Roll]      | Developer  | CD Workflow for Develop       |
-| Uzair        | [Roll]      | Developer  | About Page + CI for Release   |
-| Khubabib     | [Roll]      | Developer  | CD to Staging                 |
-| Rehan        | [Roll]      | Developer  | Travel Stories + CI for Prod  |
-| Watoo        | [Roll]      | Developer  | CD to Production              |
+| Hassan       |l1s22bsse0072| Team Lead  | Home Page, Workflow           |
+| Zoraiz       |l1s22bsse0054| Developer  | About Us page                 |
+| Uzair        |l1s22bsse0063| Developer  | Contact Us Page               |
+| Khubabib     |l1s22bsse0053| Developer  | Destination Page              |
+| Rehan        |l1s22bsse    | Developer  | Travel Stories Page           |
+| Watoo        |l1f20bsse0427| Developer  | Travel Planner Page           |
 
 ---
 
