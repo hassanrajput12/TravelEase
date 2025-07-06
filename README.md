@@ -14,14 +14,14 @@ TravelEase is a static website designed to promote the natural beauty, culture, 
 
 ## 👨‍💻 Team Members
 
-| Name         | Roll Number | Role       | Task                          |
-|--------------|-------------|------------|-------------------------------|
-| Hassan       |l1s22bsse0072| Team Lead  | Home Page, Workflow           |
-| Zoraiz       |l1s22bsse0054| Developer  | About Us page                 |
-| Uzair        |l1s22bsse0063| Developer  | Contact Us Page               |
-| Khubabib     |l1s22bsse0053| Developer  | Destination Page              |
-| Rehan        |l1s22bsse    | Developer  | Travel Stories Page           |
-| Watoo        |l1f20bsse0427| Developer  | Travel Planner Page           |
+| Name         | Roll Number | Role       | Task                               |
+|--------------|-------------|------------|------------------------------------|
+| Hassan       |l1s22bsse0072| Team Lead  | Home Page, ci-develop              |
+| Zoraiz       |l1s22bsse0054| Developer  | About Us page, cd-develop          |
+| Uzair        |l1s22bsse0063| Developer  | Contact Us Page, ci-release        |
+| Khubabib     |l1s22bsse0053| Developer  | Destination Page, cd-release       |
+| Rehan        |l1s22bsse    | Developer  | Travel Stories Page, ci-producction|
+| Watoo        |l1f20bsse0427| Developer  | Travel Planner Page,cd-production  |
 
 ---
 
