@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # Change this to your main branch name (might be 'master' or 'main')
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js (if needed)
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies (if you have a package.json)
+      run: npm install
+      
+    - name: Build project (if you have a build step)
+      run: |
+        # Add your build commands here if needed
+        # For example: npm run build
+        echo "No build step needed for static HTML"
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./src  # Change this to your actual source folder
+        # If your HTML files are in a different folder, change './src' to that folder
