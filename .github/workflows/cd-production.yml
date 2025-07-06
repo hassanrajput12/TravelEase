@@ -1,0 +1,49 @@
+name: CD - Deploy Production
+
+on:
+  push:
+    branches: [ production ]
+  workflow_run:
+    workflows: ["CI - Production Branch"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev htmlhint stylelint stylelint-config-standard
+        
+    - name: Final validation
+      run: |
+        npx htmlhint src/**/*.html
+        npx stylelint "styles/**/*.css"
+        
+    - name: Build production site
+      run: |
+        mkdir -p dist
+        cp -r src/* dist/
+        cp -r styles dist/
+        echo "$(date): Production build completed" > dist/build-info.txt
+        echo "Version: $(git rev-parse --short HEAD)" >> dist/build-info.txt
+        
+    - name: Deploy to GitHub Pages (Production)
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        publish_branch: gh-pages
+        
