@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Destinations</title>
+    <link rel="stylesheet" href="../styles/Destination.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">TravelEase</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Destinations.html">Destinations</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
+                <li><a href="Trip_Planner.html">Trip Planner</a></li>
+                <li><a href="Travel_Stories.html">Travel Stories</a></li>
+                <li><a href="Contact_Us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore Destinations</h1>
+            <p>Discover the most breathtaking locations in Northern Pakistan, from serene valleys to majestic peaks</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Destinations</button>
+            <button class="filter-btn" data-filter="valleys">Valleys</button>
+            <button class="filter-btn" data-filter="mountains">Mountains</button>
+            <button class="filter-btn" data-filter="lakes">Lakes</button>
+            <button class="filter-btn" data-filter="trekking">Trekking</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations-section">
+        <div class="container">
+            <div class="destinations-grid">
+                <!-- Hunza Valley -->
+                <div class="destination-card" data-category="valleys cultural">
+                    <div class="card-image">
+                        <h3>Hunza Valley</h3>
+                        <div class="difficulty-badge difficulty-easy">Easy</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Gilgit-Baltistan</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <p>Experience the legendary hospitality of Hunza people while enjoying breathtaking views of Rakaposhi and Ultar Sar peaks. Famous for its apricot blossoms and ancient forts.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Cultural Heritage</span>
+                            <span class="feature-tag">Mountain Views</span>
+                            <span class="feature-tag">Photography</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skardu -->
+                <div class="destination-card" data-category="lakes mountains">
+                    <div class="card-image">
+                        <h3>Skardu</h3>
+                        <div class="difficulty-badge difficulty-moderate">Moderate</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Gilgit-Baltistan</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                        <p>Gateway to the world's second-highest peak K2, featuring stunning Shangrila Resort, Satpara Lake, and breathtaking desert landscapes surrounded by towering peaks.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">K2 Base Camp</span>
+                            <span class="feature-tag">Cold Desert</span>
+                            <span class="feature-tag">Lakes</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swat Valley -->
+                <div class="destination-card" data-category="valleys cultural">
+                    <div class="card-image">
+                        <h3>Swat Valley</h3>
+                        <div class="difficulty-badge difficulty-easy">Easy</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Khyber Pakhtunkhwa</span>
+                            <span>⭐ 4.7/5</span>
+                        </div>
+                        <p>Known as the "Switzerland of Pakistan," Swat offers lush green valleys, crystal-clear rivers, and rich Buddhist heritage with ancient monasteries and stupas.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Buddhist Heritage</span>
+                            <span class="feature-tag">Green Valleys</span>
+                            <span class="feature-tag">Rivers</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fairy Meadows -->
+                <div class="destination-card" data-category="trekking mountains">
+                    <div class="card-image">
+                        <h3>Fairy Meadows</h3>
+                        <div class="difficulty-badge difficulty-challenging">Challenging</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Gilgit-Baltistan</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                        <p>A high-altitude plateau offering spectacular views of Nanga Parbat, the world's ninth-highest mountain. Perfect for camping under the stars and challenging treks.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Nanga Parbat Views</span>
+                            <span class="feature-tag">Camping</span>
+                            <span class="feature-tag">Trekking</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaghan Valley -->
+                <div class="destination-card" data-category="valleys lakes">
+                    <div class="card-image">
+                        <h3>Kaghan Valley</h3>
+                        <div class="difficulty-badge difficulty-moderate">Moderate</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Khyber Pakhtunkhwa</span>
+                            <span>⭐ 4.6/5</span>
+                        </div>
+                        <p>Home to the enchanting Saif-ul-Malook Lake with its legendary tale of love. The valley offers pristine alpine scenery and peaceful mountain retreats.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Saif-ul-Malook</span>
+                            <span class="feature-tag">Alpine Scenery</span>
+                            <span class="feature-tag">Folklore</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chitral -->
+                <div class="destination-card" data-category="cultural valleys">
+                    <div class="card-image">
+                        <h3>Chitral</h3>
+                        <div class="difficulty-badge difficulty-moderate">Moderate</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Khyber Pakhtunkhwa</span>
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                        <p>Experience the unique Kalash culture in the remote valleys of Chitral, where ancient traditions and colorful festivals continue to thrive in stunning mountain settings.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Kalash Culture</span>
+                            <span class="feature-tag">Festivals</span>
+                            <span class="feature-tag">Remote Valleys</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Murree -->
+                <div class="destination-card" data-category="valleys">
+                    <div class="card-image">
+                        <h3>Murree</h3>
+                        <div class="difficulty-badge difficulty-easy">Easy</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Punjab</span>
+                            <span>⭐ 4.3/5</span>
+                        </div>
+                        <p>Pakistan's most accessible hill station, offering cool weather, colonial architecture, and stunning views of the Himalayas. Perfect for family vacations and weekend getaways.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Hill Station</span>
+                            <span class="feature-tag">Family Friendly</span>
+                            <span class="feature-tag">Colonial Heritage</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deosai National Park -->
+                <div class="destination-card" data-category="trekking mountains">
+                    <div class="card-image">
+                        <h3>Deosai Plains</h3>
+                        <div class="difficulty-badge difficulty-moderate">Moderate</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>📍 Gilgit-Baltistan</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <p>Known as the "Land of Giants," this high-altitude plateau is home to brown bears and offers endless carpets of wildflowers during summer months.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Wildlife</span>
+                            <span class="feature-tag">Wildflowers</span>
+                            <span class="feature-tag">High Altitude</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-secondary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TravelEase</h3>
+                <p>Your gateway to Northern Pakistan's most spectacular destinations. Experience the beauty, culture, and adventure that awaits.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Twitter">t</a>
+                    <a href="#" title="Instagram">i</a>
+                    <a href="#" title="YouTube">y</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="About_Us.html">About Us</a></p>
+                <p><a href="Trip_Planner.html">Trip Planner</a></p>
+                <p><a href="Travel_Stories.html">Travel Stories</a></p>
+                <p><a href="Contact_Us.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <p><a href="planner.html">Trip Planning</a></p>
+                <p><a href="#">Hotel Booking</a></p>
+                <p><a href="#">Transportation</a></p>
+                <p><a href="#">Tour Guides</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📧 info@travelease.pk</p>
+                <p>📞 +92 300 1234567</p>
+                <p>📍 Lahore, Pakistan</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #333;">
+            <p>&copy; 2024 TravelEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const destinationCards = document.querySelectorAll('.destination-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                destinationCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        const categories = card.getAttribute('data-category');
+                        if (categories && categories.includes(filter)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            destinationCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Initialize cards with animation
+        destinationCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+        });
+    </script>
+</body>
+</html>
