@@ -18,13 +18,13 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: src  # Or '.' if your HTML is at the root
+          path: src  # 👈 change to "." if index.html is in root
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
