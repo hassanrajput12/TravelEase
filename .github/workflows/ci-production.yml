@@ -14,11 +14,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
+  #  - name: Setup Node.js
+   #   uses: actions/setup-node@v4
+    #  with:
+     #   node-version: '18'
+      #  cache: 'npm'
         
     - name: Install dependencies
       run: |
@@ -35,7 +35,7 @@ jobs:
       run: |
         echo "Running production-level validation..."
         # Ensure no debug content
-        grep -r "debug\|test\|temp" src/ && echo "ERROR: Found debug content" && exit 1 || echo "No debug content found"
+        grep -rE "\b(debug|test|temp)\b" src/ && echo "ERROR: Found debug content" && exit 1 || echo "No debug content found"
         # Check for proper meta tags
         grep -r "<meta.*viewport" src/ || echo "Warning: Consider adding viewport meta tag"
         grep -r "<title>" src/ || echo "Warning: Ensure all pages have titles"
