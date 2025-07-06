@@ -1,0 +1,49 @@
+name: CI - Production Branch
+
+on:
+  push:
+    branches: [ production ]
+  pull_request:
+    branches: [ production ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev htmlhint stylelint stylelint-config-standard
+        
+    - name: Run HTMLHint (Strict)
+      run: npx htmlhint src/**/*.html
+      
+    - name: Run Stylelint (Strict)
+      run: npx stylelint "styles/**/*.css"
+      
+    - name: Production-ready checks
+      run: |
+        echo "Running production-level validation..."
+        # Ensure no debug content
+        grep -r "debug\|test\|temp" src/ && echo "ERROR: Found debug content" && exit 1 || echo "No debug content found"
+        # Check for proper meta tags
+        grep -r "<meta.*viewport" src/ || echo "Warning: Consider adding viewport meta tag"
+        grep -r "<title>" src/ || echo "Warning: Ensure all pages have titles"
+        
+    - name: Security checks
+      run: |
+        echo "Running basic security checks..."
+        # Check for inline styles (should be in CSS files)
+        grep -r "style=" src/ && echo "Warning: Found inline styles" || echo "No inline styles found"
+        # Check for external links without rel attributes
+        grep -r "href=\"http" src/ | grep -v "rel=" && echo "Warning: External links without rel attribute" || echo "External links properly configured"
