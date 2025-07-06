@@ -1,17 +1,3 @@
 {
-  "rules": {
-    "indentation": 2,
-    "string-quotes": "double",
-    "color-hex-case": "lower",
-    "selector-combinator-space-after": " ",
-    "declaration-block-trailing-semicolon": "always",
-    "declaration-colon-space-before": "never",
-    "declaration-colon-space-after": "always",
-    "number-leading-zero": "always",
-    "font-family-name-quotes": "always-where-recommended",
-    "rule-empty-line-before": ["always", {
-      "except": ["first-nested"],
-      "ignore": ["after-comment"]
-    }]
-  }
+  "rules": {}
 }
